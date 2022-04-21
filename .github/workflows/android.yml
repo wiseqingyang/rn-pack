@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: sudosubin/git-clone-action@v1.0.1
       with:
         repository: git@e.coding.net:starblazer/projectb/wxdl-app.git
+        platform: coding
         ssh-key: ${{ secrets.sshkey }}
       
     - name: set up JDK 11
